@@ -1,0 +1,2763 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Writer | Articles, Copywriting & SEO Content</title>
+    <meta name="description" content="Content Writer portfolio focused on website content, blog writing, SEO content, copywriting, product descriptions, editing and purposeful digital communication.">
+    <meta name="keywords" content="Content Writer, Copywriting, SEO Content, Blog Writing, Article Writing, Website Content, Product Descriptions, Remote Writer">
+    <link rel="canonical" href="https://contentwriter.studio/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Content Writer | Articles, Copywriting & SEO Content">
+    <meta property="og:description" content="Professional content writer available for remote jobs and project-based work. Specializing in SEO content, blog writing, copywriting, and editorial pieces.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts: Editorial Serif + Clean Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --bg-color: #faf9f5;
+            --surface-color: #ffffff;
+            --surface-alt: #f3f1ea;
+            --text-primary: #111111;
+            --text-secondary: #555555;
+            --text-muted: #888888;
+            --border-color: #e2dfd5;
+            --border-dark: #111111;
+            --accent: #8b263e; /* Sophisticated Editorial Burgundy Accent */
+            --accent-hover: #6d1c30;
+            --code-bg: #f0eee6;
+            --font-serif: 'Instrument Serif', 'Newsreader', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            --max-width: 1320px;
+            --gutter: clamp(1.25rem, 3vw, 3rem);
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --surface-color: #1a1a1a;
+            --surface-alt: #222222;
+            --text-primary: #f4f4f0;
+            --text-secondary: #b0b0b0;
+            --text-muted: #777777;
+            --border-color: #2e2e2e;
+            --border-dark: #f4f4f0;
+            --accent: #c44563;
+            --accent-hover: #e05674;
+            --code-bg: #222222;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            background-image: radial-gradient(var(--border-color) 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+
+        /* Accessibility: Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--text-primary);
+            color: var(--bg-color);
+            padding: 8px 16px;
+            z-index: 1001;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Typography Styles */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -0.01em;
+        }
+
+        .display-heading {
+            font-size: clamp(3.5rem, 8vw, 8.5rem);
+            text-transform: uppercase;
+        }
+
+        .section-heading {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: clamp(1rem, 1.1vw, 1.15rem);
+            color: var(--text-secondary);
+            max-width: 65ch;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-left: var(--gutter);
+            padding-right: var(--gutter);
+        }
+
+        /* Reading Progress Bar */
+        #reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: var(--accent);
+            width: 0%;
+            z-index: 1002;
+            transition: width 0.1s linear;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background-color: rgba(var(--bg-color), 0.9);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.15em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.72rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            position: relative;
+            padding: 2px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--text-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--text-primary);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.45rem 1.1rem;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid var(--border-dark);
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 0;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--text-primary);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-meta span::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent);
+            border-radius: 50%;
+        }
+
+        .hero-text h1 {
+            margin-bottom: 2rem;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-contacts {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        .hero-contacts a:hover {
+            color: var(--accent);
+        }
+
+        /* Editorial Writing Interface Hero Visual */
+        .hero-visual {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+
+        .editor-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
+
+        .editor-content h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-serif);
+        }
+
+        .editor-content .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            font-style: italic;
+        }
+
+        .editor-content p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .editor-highlight {
+            background-color: var(--surface-alt);
+            border-left: 3px solid var(--accent);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+        }
+
+        .editor-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+        }
+
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Editorial Marquee */
+        .marquee-section {
+            border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
+            background-color: var(--surface-alt);
+            padding: 1.5rem 0;
+            white-space: nowrap;
+        }
+
+        .marquee-track {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+
+        .marquee-section:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-right: 3rem;
+            color: var(--text-primary);
+        }
+
+        .marquee-item span {
+            margin-left: 3rem;
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Section Generic Layouts */
+        section {
+            padding: 100px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .section-tag {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .about-content h2 {
+            font-size: clamp(2.5rem, 4vw, 3.75rem);
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .about-content p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+        }
+
+        .about-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .profile-specs {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .spec-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
+
+        .spec-value {
+            font-weight: 500;
+            font-size: 1rem;
+            text-align: right;
+        }
+
+        /* Writing Specialties (What I Write) */
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .specialty-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .specialty-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--text-primary);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.04);
+        }
+
+        .specialty-num {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .specialty-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .specialty-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* Toolkit / Skills */
+        .toolkit-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+        }
+
+        .toolkit-column {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2rem 1.5rem;
+        }
+
+        .toolkit-column h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .toolkit-column ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .toolkit-column li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toolkit-column li::before {
+            content: '—';
+            color: var(--accent);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: var(--text-primary);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-serif);
+            color: var(--accent);
+        }
+
+        .service-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-link {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-link::after {
+            content: '→';
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover .service-link::after {
+            transform: translateX(4px);
+        }
+
+        /* Writing Samples Section */
+        .samples-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+
+        .sample-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .sample-card:hover {
+            border-color: var(--text-primary);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.03);
+        }
+
+        .sample-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .sample-badge {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            background-color: var(--surface-alt);
+            padding: 0.35rem 0.75rem;
+            border: 1px solid var(--border-color);
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .sample-number {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--text-muted);
+        }
+
+        .sample-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .sample-excerpt {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            border-left: 2px solid var(--border-dark);
+            padding-left: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Interactive Reading Room */
+        .reading-room-wrapper {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+        }
+
+        .reader-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2.5rem;
+        }
+
+        .reader-toolbar {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .reader-btn {
+            background: var(--surface-alt);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .reader-btn:hover, .reader-btn.active {
+            background: var(--text-primary);
+            color: var(--bg-color);
+            border-color: var(--text-primary);
+        }
+
+        .article-container {
+            max-width: 750px;
+            margin: 0 auto;
+            transition: max-width 0.3s ease, font-size 0.3s ease;
+        }
+
+        .article-container.width-narrow { max-width: 580px; }
+        .article-container.width-wide { max-width: 900px; }
+
+        .article-header-meta {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .article-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .article-body p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-body h4 {
+            font-size: 1.75rem;
+            margin: 2.5rem 0 1rem;
+            font-family: var(--font-serif);
+        }
+
+        .article-quote {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            line-height: 1.3;
+            margin: 2.5rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        /* Interactive Tools Section */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+
+        .tool-box {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tool-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-box p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tool-input {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .tool-input:focus {
+            border-color: var(--text-primary);
+        }
+
+        .tool-output {
+            background-color: var(--surface-alt);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            min-height: 120px;
+            font-size: 0.95rem;
+            white-space: pre-wrap;
+        }
+
+        .tone-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tone-chip {
+            background-color: var(--surface-alt);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tone-chip:hover, .tone-chip.active {
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+            border-color: var(--text-primary);
+        }
+
+        /* Article Structure Builder */
+        .builder-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .builder-step-btn {
+            background-color: var(--surface-alt);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            text-align: left;
+            cursor: pointer;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .builder-step-btn:hover, .builder-step-btn.active {
+            border-color: var(--text-primary);
+            background-color: var(--surface-color);
+        }
+
+        /* Before/After Editing Slider */
+        .comparison-container {
+            position: relative;
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            overflow: hidden;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .comparison-pane h4 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .comparison-pane p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .comparison-pane.after {
+            border-left: 1px solid var(--border-color);
+            padding-left: 2rem;
+        }
+
+        /* Content Quality Checker */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-card {
+            background-color: var(--surface-alt);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .stat-card .num {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        .stat-card .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
+
+        /* Brand Voice Spectrum */
+        .voice-sliders {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .slider-group label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+        }
+
+        .slider-group input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
+        .voice-preview-box {
+            background-color: var(--surface-alt);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            font-style: italic;
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            text-align: center;
+        }
+
+        /* Content Process Steps */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .process-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .process-num {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            line-height: 1;
+            display: block;
+        }
+
+        .process-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .process-card p {
+            font-size: 0.95rem;
+        }
+
+        /* SEO Section */
+        .seo-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .seo-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+        }
+
+        .seo-preview-box {
+            background-color: var(--surface-alt);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .seo-preview-box .serp-title {
+            color: #1a0dab;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        [data-theme="dark"] .seo-preview-box .serp-title {
+            color: #8ab4f8;
+        }
+
+        .seo-preview-box .serp-url {
+            color: #006621;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        [data-theme="dark"] .seo-preview-box .serp-url {
+            color: #5bb974;
+        }
+
+        .seo-preview-box .serp-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Remote Work Section */
+        .remote-banner {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 5rem 3rem;
+            text-align: center;
+        }
+
+        .remote-banner h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .remote-banner p {
+            font-size: 1.25rem;
+            margin: 0 auto 3rem;
+            max-width: 700px;
+        }
+
+        .remote-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: left;
+        }
+
+        .remote-card {
+            background-color: var(--surface-alt);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+        }
+
+        .remote-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Why Work Together */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+        }
+
+        .why-item {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2rem 1.5rem;
+        }
+
+        .why-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .why-item p {
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Accordion */
+        .faq-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--surface-color);
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.75rem;
+            text-align: left;
+            font-family: var(--font-sans);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            padding: 0 1.75rem;
+            background-color: var(--surface-alt);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 1.75rem 1.75rem;
+        }
+
+        .faq-answer p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section (ZERO IMAGES) */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: clamp(2.5rem, 4vw, 4rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-details-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-detail-row {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .contact-detail-row .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-detail-row .val {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .contact-detail-row .val:hover {
+            color: var(--accent);
+        }
+
+        .contact-form {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--text-primary);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-success-message {
+            background-color: var(--surface-alt);
+            border: 1px solid var(--accent);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            display: none;
+        }
+
+        .form-success-message h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background-color: var(--surface-alt);
+            padding: 120px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .final-cta h2 {
+            font-size: clamp(3rem, 7vw, 6rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--bg-color);
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 5rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .footer-col p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* Back to Top */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+            width: 45px;
+            height: 45px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            font-size: 1.2rem;
+        }
+
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #back-to-top:hover {
+            background-color: var(--accent);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1200px) {
+            .toolkit-grid { grid-template-columns: repeat(3, 1fr); }
+            .why-grid { grid-template-columns: repeat(3, 1fr); }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
+        }
+
+        @media (max-width: 992px) {
+            .hero-grid, .about-grid, .seo-layout, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .specialties-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .toolkit-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            
+            /* Mobile Nav Overlay */
+            .nav-links.mobile-open {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-color);
+                border-bottom: 1px solid var(--border-color);
+                padding: 2.5rem;
+                gap: 1.5rem;
+                align-items: flex-start;
+                box-shadow: 0 20px 30px rgba(0,0,0,0.05);
+                z-index: 999;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .specialties-grid, .services-grid, .samples-grid, .tools-grid, .toolkit-grid, .process-grid, .why-grid, .remote-cards-grid, .comparison-grid, .stats-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero { padding: 140px 0 60px; }
+            section { padding: 70px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons, .cta-buttons { flex-direction: column; width: 100%; }
+            .hero-buttons .btn, .cta-buttons .btn { width: 100%; text-align: center; }
+            .hero-contacts { flex-direction: column; gap: 0.75rem; }
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .marquee-track { animation: none; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="reading-progress"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">WORDS.STUDIO</a>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#specialties" class="nav-link">Writing</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#samples" class="nav-link">Work</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="#tools" class="nav-link">Tools</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="reader-btn" aria-label="Toggle Dark Mode">Mode</button>
+                <a href="#contact" class="btn hidden-mobile" style="padding: 0.5rem 1.25rem; font-size: 0.8rem;">Start a Project</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <div class="hero-meta">
+                        <span>Content Writer</span>
+                        <span>Available for Remote & Projects</span>
+                    </div>
+                    <h1 class="display-heading">Words that inform, persuade and connect.</h1>
+                    <p>Creating clear, engaging and purposeful content designed to communicate ideas, strengthen messages and keep readers engaged.</p>
+                    <div class="hero-buttons">
+                        <a href="#samples" class="btn">Explore My Writing</a>
+                        <a href="#contact" class="btn btn-outline">Start a Project</a>
+                        <a href="https://wa.me/2349067090901" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp Me</a>
+                    </div>
+                    <div class="hero-contacts">
+                        <div>
+                            <span style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted);">Phone & WhatsApp</span>
+                            <a href="tel:+2349067090901">+234 906 7090901</a>
+                        </div>
+                        <div>
+                            <span style="display:block; font-size:0.75rem; text-transform:uppercase; color:var(--text-muted);">Direct Email</span>
+                            <a href="mailto:content.writer@gmail.com">content.writer@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="editor-topbar">
+                        <span>Draft_01.md</span>
+                        <span>Word Count: 1,240</span>
+                    </div>
+                    <div class="editor-content">
+                        <h3>The Anatomy of Clear Digital Communication</h3>
+                        <div class="subtitle">By Content Writer • Concept Article</div>
+                        <p>Great content does not demand attention; it earns it through clarity, logical structure, and genuine respect for the reader's time.</p>
+                        <div class="editor-highlight">
+                            "When every sentence serves a purpose, the core message becomes unmistakable."
+                        </div>
+                        <p class="typing-cursor">Structuring arguments with precision and empathy...</p>
+                    </div>
+                    <div class="editor-footer">
+                        <span>Status: Ready for Publishing</span>
+                        <span style="color: var(--accent);">● Live Preview</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Editorial Marquee -->
+        <div class="marquee-section">
+            <div class="marquee-track">
+                <span class="marquee-item">Words<span>/</span></span>
+                <span class="marquee-item">Stories<span>/</span></span>
+                <span class="marquee-item">Ideas<span>/</span></span>
+                <span class="marquee-item">Research<span>/</span></span>
+                <span class="marquee-item">Copy<span>/</span></span>
+                <span class="marquee-item">Content<span>/</span></span>
+                <span class="marquee-item">Clarity<span>/</span></span>
+                <span class="marquee-item">Strategy<span>/</span></span>
+                <!-- Duplicate for seamless loop -->
+                <span class="marquee-item">Words<span>/</span></span>
+                <span class="marquee-item">Stories<span>/</span></span>
+                <span class="marquee-item">Ideas<span>/</span></span>
+                <span class="marquee-item">Research<span>/</span></span>
+                <span class="marquee-item">Copy<span>/</span></span>
+                <span class="marquee-item">Content<span>/</span></span>
+                <span class="marquee-item">Clarity<span>/</span></span>
+                <span class="marquee-item">Strategy<span>/</span></span>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container about-grid">
+                <div class="about-content">
+                    <span class="section-tag">Professional Profile</span>
+                    <h2>Good writing makes ideas clear.</h2>
+                    <p>In a digital landscape crowded with noise, purposeful content cuts through. My work focuses on translating complex concepts into accessible, engaging narratives that resonate with target audiences and drive genuine engagement.</p>
+                    <p>Every piece is grounded in thorough research, structured logically, and refined to match your exact brand voice and communication objectives.</p>
+                    <p>Whether you need in-depth thought leadership articles, conversion-focused copywriting, or comprehensive website content, every project receives meticulous attention to detail.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Writer Profile</h3>
+                    <div class="profile-specs">
+                        <div class="spec-item">
+                            <span class="spec-label">Name</span>
+                            <span class="spec-value">Content Writer</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Primary Role</span>
+                            <span class="spec-value">Content Writer</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Phone</span>
+                            <span class="spec-value"><a href="tel:+2349067090901">+234 906 7090901</a></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Email</span>
+                            <span class="spec-value"><a href="mailto:content.writer@gmail.com">content.writer@gmail.com</a></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Availability</span>
+                            <span class="spec-value">Remote Jobs & Project-Based Work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing Specialties -->
+        <section id="specialties">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Core Disciplines</span>
+                        <h2 class="section-heading">What I Write</h2>
+                    </div>
+                    <p>Comprehensive content solutions tailored for modern digital platforms, publications, and businesses.</p>
+                </div>
+                <div class="specialties-grid">
+                    <div class="specialty-card">
+                        <span class="specialty-num">01</span>
+                        <h3>Blog Articles</h3>
+                        <p>Informative and engaging articles designed to attract organic traffic and establish thought leadership.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">02</span>
+                        <h3>Website Content</h3>
+                        <p>Clear, structured web pages that communicate value propositions and guide visitor actions.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">03</span>
+                        <h3>SEO Content</h3>
+                        <p>Search-optimized writing that aligns with user intent while maintaining natural readability.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">04</span>
+                        <h3>Copywriting</h3>
+                        <p>Persuasive marketing copy crafted to capture interest and communicate brand value clearly.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">05</span>
+                        <h3>Landing Page Copy</h3>
+                        <p>Focused headlines, feature breakdowns, and calls-to-action built for maximum conversion.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">06</span>
+                        <h3>Product Descriptions</h3>
+                        <p>Engaging product narratives that highlight features, benefits, and practical utility.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">07</span>
+                        <h3>Social Media Content</h3>
+                        <p>Concise, punchy captions and content concepts tailored for digital audience engagement.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">08</span>
+                        <h3>Email Copy</h3>
+                        <p>Professional newsletter and campaign copy designed with high readability and clear intent.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">09</span>
+                        <h3>Business Content</h3>
+                        <p>Professional corporate documents, overviews, and communications written with precision.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">10</span>
+                        <h3>Editorial Content</h3>
+                        <p>Thoughtful essays, opinion pieces, and long-form narratives built on solid research.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">11</span>
+                        <h3>Proofreading</h3>
+                        <p>Meticulous review to eradicate grammatical errors and refine syntax and phrasing.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <span class="specialty-num">12</span>
+                        <h3>Content Strategy</h3>
+                        <p>Strategic content planning, topic organization, and structural frameworks for brands.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing Skills / Toolkit -->
+        <section id="tools-skills">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Capabilities</span>
+                        <h2 class="section-heading">The Writer's Toolkit</h2>
+                    </div>
+                </div>
+                <div class="toolkit-grid">
+                    <div class="toolkit-column">
+                        <h3>Research</h3>
+                        <ul>
+                            <li>Topic Research</li>
+                            <li>Information Gathering</li>
+                            <li>Source Evaluation</li>
+                            <li>Content Planning</li>
+                        </ul>
+                    </div>
+                    <div class="toolkit-column">
+                        <h3>Writing</h3>
+                        <ul>
+                            <li>Headlines</li>
+                            <li>Storytelling</li>
+                            <li>Long-Form Writing</li>
+                            <li>Short-Form Copy</li>
+                            <li>Persuasive Writing</li>
+                        </ul>
+                    </div>
+                    <div class="toolkit-column">
+                        <h3>Editing</h3>
+                        <ul>
+                            <li>Grammar</li>
+                            <li>Clarity</li>
+                            <li>Structure</li>
+                            <li>Readability</li>
+                            <li>Proofreading</li>
+                        </ul>
+                    </div>
+                    <div class="toolkit-column">
+                        <h3>SEO</h3>
+                        <ul>
+                            <li>Search Intent</li>
+                            <li>Keyword Integration</li>
+                            <li>Content Structure</li>
+                            <li>Meta Copy</li>
+                            <li>Internal Planning</li>
+                        </ul>
+                    </div>
+                    <div class="toolkit-column">
+                        <h3>Brand Voice</h3>
+                        <ul>
+                            <li>Tone</li>
+                            <li>Messaging</li>
+                            <li>Consistency</li>
+                            <li>Audience Adaptation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Offerings</span>
+                        <h2 class="section-heading">Professional Services</h2>
+                    </div>
+                    <p>Dedicated writing services structured to support your communication goals.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div>
+                            <div class="service-icon">01</div>
+                            <h3>Blog & Article Writing</h3>
+                            <p>Clear, structured and engaging long-form content tailored for your readers and publication guidelines.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Inquire Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div>
+                            <div class="service-icon">02</div>
+                            <h3>Website Content</h3>
+                            <p>Professional website copy designed around clarity, structure and specific audience needs.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Inquire Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div>
+                            <div class="service-icon">03</div>
+                            <h3>SEO Content</h3>
+                            <p>Search-focused content structured thoughtfully around topics, user intent and readability.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Inquire Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div>
+                            <div class="service-icon">04</div>
+                            <h3>Copywriting</h3>
+                            <p>Persuasive copy designed to communicate value clearly and encourage meaningful audience action.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Inquire Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div>
+                            <div class="service-icon">05</div>
+                            <h3>Landing Page Copy</h3>
+                            <p>Focused messaging for landing pages, key sections and compelling calls-to-action.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Inquire Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div>
+                            <div class="service-icon">06</div>
+                            <h3>Product Descriptions</h3>
+                            <p>Clear and engaging descriptions for products, services and digital catalogs.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Inquire Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div>
+                            <div class="service-icon">07</div>
+                            <h3>Social Media Content</h3>
+                            <p>Short-form captions and content concepts designed for digital platform engagement.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Inquire Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div>
+                            <div class="service-icon">08</div>
+                            <h3>Email Content</h3>
+                            <p>Professional email copy and campaign content crafted for clarity and engagement.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Inquire Now</a>
+                    </div>
+                    <div class="service-card">
+                        <div>
+                            <div class="service-icon">09</div>
+                            <h3>Editing & Proofreading</h3>
+                            <p>Meticulously improving grammar, sentence structure, flow, clarity and overall readability.</p>
+                        </div>
+                        <a href="#contact" class="service-link">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing Sample Section -->
+        <section id="samples">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Portfolio Showcase</span>
+                        <h2 class="section-heading">Selected Writing</h2>
+                    </div>
+                    <p>Explore conceptual samples demonstrating editorial style, tone, and structural clarity.</p>
+                </div>
+                <div class="samples-grid">
+                    <div class="sample-card">
+                        <div class="sample-meta">
+                            <span class="sample-badge">Concept Writing Sample</span>
+                            <span class="sample-number">01</span>
+                        </div>
+                        <h3>How Digital Products Become Easier to Use</h3>
+                        <p class="sample-excerpt">"Simplicity is rarely an accident of design; it is the deliberate result of removing friction until only the essential value remains for the user..."</p>
+                        <p>An exploration of user experience principles and how thoughtful micro-copy reduces cognitive load in digital software interfaces.</p>
+                    </div>
+                    <div class="sample-card">
+                        <div class="sample-meta">
+                            <span class="sample-badge">Concept Writing Sample</span>
+                            <span class="sample-number">02</span>
+                        </div>
+                        <h3>Why Clear Communication Matters in Business</h3>
+                        <p class="sample-excerpt">"Ambiguity is the silent killer of productivity. When teams align around plain language, execution speed multiplies naturally..."</p>
+                        <p>A business analysis on how transparent internal and external communication builds trust and eliminates operational friction.</p>
+                    </div>
+                    <div class="sample-card">
+                        <div class="sample-meta">
+                            <span class="sample-badge">Concept Writing Sample</span>
+                            <span class="sample-number">03</span>
+                        </div>
+                        <h3>Designed for Everyday Simplicity</h3>
+                        <p class="sample-excerpt">"Crafted from premium anodized aluminum with an intuitive interface, this device fits seamlessly into your daily workflow without clutter..."</p>
+                        <p>A product description sample balancing technical specifications with emotional consumer benefits.</p>
+                    </div>
+                    <div class="sample-card">
+                        <div class="sample-meta">
+                            <span class="sample-badge">Concept Writing Sample</span>
+                            <span class="sample-number">04</span>
+                        </div>
+                        <h3>Turn Your Idea Into Something People Understand</h3>
+                        <p class="sample-excerpt">"Stop losing customers to confusion. Clarify your core message in three seconds with copy that speaks directly to human needs..."</p>
+                        <p>Landing page copy structured to hook visitors instantly and guide them smoothly toward conversion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Article Reader -->
+        <section id="reading-room" style="background-color: var(--surface-alt);">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Interactive Experience</span>
+                        <h2 class="section-heading">Reading Room</h2>
+                    </div>
+                    <p>Test the editorial layout with adjustable reading preferences.</p>
+                </div>
+                <div class="reading-room-wrapper">
+                    <div class="reader-controls">
+                        <div class="reader-toolbar">
+                            <button class="reader-btn" id="font-increase">A+</button>
+                            <button class="reader-btn" id="font-decrease">A-</button>
+                            <button class="reader-btn width-btn active" data-width="default">Standard Width</button>
+                            <button class="reader-btn width-btn" data-width="narrow">Narrow Width</button>
+                            <button class="reader-btn width-btn" data-width="wide">Wide Width</button>
+                        </div>
+                        <button class="reader-btn" id="reader-dark-mode">Dark Mode</button>
+                    </div>
+
+                    <div class="article-container" id="article-box">
+                        <div class="article-header-meta">
+                            <span>Category: Editorial</span>
+                            <span>3 Min Read</span>
+                            <span>Author: Content Writer</span>
+                            <span>Concept Sample</span>
+                        </div>
+                        <h3 class="article-title">The Power of Restraint in Modern Writing</h3>
+                        <div class="article-body" id="article-text-content">
+                            <p>In an era dominated by hyper-concatenated feeds and relentless notifications, the most radical thing a writer can do is pause. Restraint is not merely about brevity; it is about precision. It is the conscious discipline of choosing one definitive word over three decorative adjectives.</p>
+                            
+                            <h4>The Discipline of Editing</h4>
+                            <p>When drafting initial thoughts, enthusiasm often leads to verbosity. We pile on metaphors, reiterate points three different ways, and bury our strongest insights beneath layers of conversational filler. True editorial craft begins only when the pruning shears come out.</p>
+
+                            <div class="article-quote">
+                                "Clear writing is the outward sign of clear thinking. If an idea cannot be stated simply, it has not yet been fully understood."
+                            </div>
+
+                            <p>Consider the structure of a well-crafted paragraph. Every sentence must earn its place by either advancing the narrative, introducing a vital nuance, or providing necessary evidence. If a sentence can be deleted without weakening the core argument, it should be removed.</p>
+
+                            <h4>Connecting with the Reader</h4>
+                            <p>Ultimately, writing is an act of empathy. The writer must constantly step outside their own head and walk in the reader's shoes. By anticipating questions, eliminating jargon, and maintaining a steady, logical rhythm, you build a bridge of understanding that endures long after the page is closed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Headline Lab & Interactive Tools -->
+        <section id="tools">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Interactive Demos</span>
+                        <h2 class="section-heading">Headline Lab & Tone Selector</h2>
+                    </div>
+                </div>
+                <div class="tools-grid">
+                    <!-- Headline Lab -->
+                    <div class="tool-box">
+                        <div>
+                            <h3>Headline Lab</h3>
+                            <p>Enter any topic or subject to generate conceptual headline variations instantly.</p>
+                            <input type="text" id="headline-input" class="tool-input" placeholder="e.g. Remote Work Productivity">
+                            <button class="btn" id="generate-headlines-btn" style="width: 100%;">Generate Headlines</button>
+                        </div>
+                        <div class="tool-output" id="headline-output">
+                            <em>Enter a topic above and click generate to view conceptual headline variations across multiple editorial formats.</em>
+                        </div>
+                    </div>
+
+                    <!-- Tone Selector -->
+                    <div class="tool-box">
+                        <div>
+                            <h3>Find the Right Voice</h3>
+                            <p>Select a tone to see how the exact same message adapts across different brand voices.</p>
+                            <div class="tone-chips" id="tone-chips">
+                                <button class="tone-chip active" data-tone="professional">Professional</button>
+                                <button class="tone-chip" data-tone="friendly">Friendly</button>
+                                <button class="tone-chip" data-tone="persuasive">Persuasive</button>
+                                <button class="tone-chip" data-tone="educational">Educational</button>
+                                <button class="tone-chip" data-tone="editorial">Editorial</button>
+                                <button class="tone-chip" data-tone="conversational">Conversational</button>
+                                <button class="tone-chip" data-tone="minimal">Minimal</button>
+                            </div>
+                        </div>
+                        <div class="voice-preview-box" id="tone-output">
+                            "Our comprehensive content solutions are meticulously structured to support your institutional communication goals."
+                        </div>
+                        <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-top: 1rem; text-align: center;">Conceptual Writing Demonstration</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Structure Builder & Before/After Editing -->
+        <section id="interactive-features">
+            <div class="container" style="display: flex; flex-direction: column; gap: 4rem;">
+                
+                <!-- Content Structure Builder -->
+                <div class="tool-box" style="width: 100%;">
+                    <div class="section-header" style="margin-bottom: 2rem;">
+                        <div>
+                            <span class="section-tag">Frameworks</span>
+                            <h2 class="section-heading" style="font-size: 2.5rem;">Build an Article</h2>
+                        </div>
+                        <p>Click each structural section to explore its purpose in professional article architecture.</p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: start;">
+                        <div class="builder-steps" id="builder-steps">
+                            <button class="builder-step-btn active" data-step="headline">01 — Headline <span>→</span></button>
+                            <button class="builder-step-btn" data-step="intro">02 — Introduction <span>→</span></button>
+                            <button class="builder-step-btn" data-step="p1">03 — Main Point 01 <span>→</span></button>
+                            <button class="builder-step-btn" data-step="p2">04 — Main Point 02 <span>→</span></button>
+                            <button class="builder-step-btn" data-step="p3">05 — Main Point 03 <span>→</span></button>
+                            <button class="builder-step-btn" data-step="conclusion">06 — Conclusion <span>→</span></button>
+                            <button class="builder-step-btn" data-step="cta">07 — Call to Action <span>→</span></button>
+                        </div>
+                        <div class="tool-output" id="builder-desc" style="margin-top: 0; min-height: 200px; display: flex; flex-direction: column; justify-content: center;">
+                            <h4 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--accent);">Headline Architecture</h4>
+                            <p>The headline acts as the primary gatekeeper. It must accurately reflect the article's value proposition while sparking enough curiosity to warrant the reader's time and attention.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Before / After Editing -->
+                <div>
+                    <div class="section-header" style="margin-bottom: 2rem;">
+                        <div>
+                            <span class="section-tag">Editorial Transformation</span>
+                            <h2 class="section-heading" style="font-size: 2.5rem;">Editing Changes Everything</h2>
+                        </div>
+                        <p>Compare an unclear draft with its polished editorial counterpart.</p>
+                    </div>
+                    <div class="comparison-container">
+                        <div class="comparison-grid">
+                            <div class="comparison-pane">
+                                <h4>Before (Unclear Draft)</h4>
+                                <p>In today's fast world we are making lots of things for companies to help them grow big by using digital internet stuff and writing words that are good for google search engines so people can visit websites more often and buy stuff easier without problems.</p>
+                            </div>
+                            <div class="comparison-pane after">
+                                <h4>After (Polished Editorial Copy)</h4>
+                                <p>Effective digital content bridges the gap between brand objectives and audience needs. Through precise SEO strategy and clear messaging, we turn casual visitors into loyal customers.</p>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 2rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Conceptual Example — Clarity & Structure Refinement</div>
+                    </div>
+                </div>
+
+                <!-- Content Quality Checker -->
+                <div class="tool-box" style="width: 100%;">
+                    <div class="section-header" style="margin-bottom: 2rem;">
+                        <div>
+                            <span class="section-tag">Utility Tool</span>
+                            <h2 class="section-heading" style="font-size: 2.5rem;">Content Check</h2>
+                        </div>
+                        <p>Paste or type your text below to instantly evaluate word count, character count, and structure.</p>
+                    </div>
+                    <textarea id="checker-input" class="tool-input" placeholder="Type or paste your text here to analyze..." style="min-height: 140px;">Great content does not demand attention; it earns it through clarity, logical structure, and genuine respect for the reader's time.</textarea>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="num" id="stat-words">19</span>
+                            <span class="label">Words</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="num" id="stat-chars">132</span>
+                            <span class="label">Characters</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="num" id="stat-sentences">1</span>
+                            <span class="label">Sentences</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="num" id="stat-paragraphs">1</span>
+                            <span class="label">Paragraphs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brand Voice Spectrum -->
+                <div class="tool-box" style="width: 100%;">
+                    <div class="section-header" style="margin-bottom: 2rem;">
+                        <div>
+                            <span class="section-tag">Tone Tuning</span>
+                            <h2 class="section-heading" style="font-size: 2.5rem;">Find Your Voice</h2>
+                        </div>
+                        <p>Adjust the sliders below to explore how tone variations transform a baseline statement.</p>
+                    </div>
+                    <div class="voice-sliders">
+                        <div class="slider-group">
+                            <label><span>Formal</span><span>Conversational</span></label>
+                            <input type="range" id="slider-formal" min="0" max="100" value="50">
+                        </div>
+                        <div class="slider-group">
+                            <label><span>Informative</span><span>Persuasive</span></label>
+                            <input type="range" id="slider-persuasive" min="0" max="100" value="50">
+                        </div>
+                        <div class="slider-group">
+                            <label><span>Technical</span><span>Simple</span></label>
+                            <input type="range" id="slider-simple" min="0" max="100" value="50">
+                        </div>
+                    </div>
+                    <div class="voice-preview-box" id="voice-slider-output">
+                        "We provide professional content writing services designed to communicate your brand message with clarity."
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Content Process Section -->
+        <section id="process">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Workflow</span>
+                        <h2 class="section-heading">From Idea to Final Copy</h2>
+                    </div>
+                    <p>A systematic 7-step approach ensuring precision, quality, and relevance at every stage.</p>
+                </div>
+                <div class="process-grid">
+                    <div class="process-card">
+                        <span class="process-num">01</span>
+                        <h3>Discover</h3>
+                        <p>Understand the topic, target audience, and primary communication objectives.</p>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-num">02</span>
+                        <h3>Research</h3>
+                        <p>Gather relevant information, verify facts, and identify useful editorial angles.</p>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-num">03</span>
+                        <h3>Plan</h3>
+                        <p>Create the content structure, headings, and logical flow of key points.</p>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-num">04</span>
+                        <h3>Write</h3>
+                        <p>Develop the first draft with a clear, engaging, and purposeful voice.</p>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-num">05</span>
+                        <h3>Edit</h3>
+                        <p>Improve overall structure, sentence flow, clarity, and grammatical precision.</p>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-num">06</span>
+                        <h3>Refine</h3>
+                        <p>Adjust tone nuances, messaging consistency, and final stylistic details.</p>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-num">07</span>
+                        <h3>Deliver</h3>
+                        <p>Prepare the final polished content formatted and ready for its intended platform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Content Section -->
+        <section id="seo-section">
+            <div class="container seo-layout">
+                <div>
+                    <span class="section-tag">Search Strategy</span>
+                    <h2>Writing with Search Intent</h2>
+                    <p style="margin-bottom: 1.5rem;">Effective SEO content requires a delicate balance between search engine algorithms and human readers. By aligning content structure with what users are genuinely searching for, your pages gain sustainable visibility.</p>
+                    <p>Every piece of SEO content is built around clear topic clusters, logical headings (H2/H3), strategic keyword integration, and compelling meta descriptions that drive click-through rates.</p>
+                </div>
+                <div class="seo-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Concept Example</h3>
+                    <div style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Demonstrating structure for an optimized article card.</div>
+                    <div class="seo-preview-box">
+                        <div class="serp-title">How to Structure Long-Form Articles for SEO & Readers</div>
+                        <div class="serp-url">https://contentwriter.studio/blog/article-structure</div>
+                        <div class="serp-desc">Learn how to combine search intent, logical headings, and engaging storytelling to rank higher and keep readers engaged from start to finish.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Remote & Project-Based Work Banner -->
+        <section id="remote" style="background-color: var(--surface-alt);">
+            <div class="container">
+                <div class="remote-banner">
+                    <span class="section-tag">Collaboration</span>
+                    <h2>Words Without Borders</h2>
+                    <p>Available for remote jobs and project-based content writing work.</p>
+                    <div class="remote-cards-grid">
+                        <div class="remote-card">
+                            <h3>Remote Jobs</h3>
+                            <p>Available for remote content writing opportunities, ongoing editorial roles, and digital publishing positions.</p>
+                        </div>
+                        <div class="remote-card">
+                            <h3>Project-Based</h3>
+                            <p>Available for custom writing, website content overhauls, blog article packages, editing, and content strategy projects.</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn">Discuss a Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Work Together -->
+        <section id="why">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Values</span>
+                        <h2 class="section-heading">Why Words Matter</h2>
+                    </div>
+                </div>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <h3>Clear Communication</h3>
+                        <p>No unnecessary fluff or jargon—just direct, impactful messaging.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Strong Structure</h3>
+                        <p>Logical flow that guides the reader seamlessly from start to finish.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Audience Awareness</h3>
+                        <p>Content tailored specifically to what your readers care about.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Purpose-Driven</h3>
+                        <p>Every paragraph written with a clear goal and intended outcome.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Careful Editing</h3>
+                        <p>Meticulous review ensuring absolute grammatical and stylistic precision.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-header" style="text-align: center; display: block;">
+                    <span class="section-tag">Questions & Answers</span>
+                    <h2 class="section-heading">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">What type of content can you write?</button>
+                        <div class="faq-answer">
+                            <p>I specialize in a wide variety of content formats including blog articles, website copy, SEO content, copywriting, landing pages, product descriptions, social media content, email newsletters, and business communications.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you write blog articles?</button>
+                        <div class="faq-answer">
+                            <p>Yes. I create structured, engaging, and research-backed blog articles designed to inform readers, establish thought leadership, and improve organic search visibility.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you create website content?</button>
+                        <div class="faq-answer">
+                            <p>Yes. I write professional website copy for homepages, about pages, service pages, and landing pages focused on clarity, structure, and audience engagement.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you write SEO content?</button>
+                        <div class="faq-answer">
+                            <p>Yes. I write search-focused content structured around topic relevance, search intent, and readability without compromising natural language flow.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you write landing pages?</button>
+                        <div class="faq-answer">
+                            <p>Yes. I craft focused messaging, compelling headlines, feature breakdowns, and clear calls-to-action for landing pages.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you edit and proofread content?</button>
+                        <div class="faq-answer">
+                            <p>Yes. I provide professional editing and proofreading services to improve grammar, sentence structure, flow, clarity, and overall readability.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you create product descriptions?</button>
+                        <div class="faq-answer">
+                            <p>Yes. I write engaging and clear descriptions for products and digital catalogs that highlight features and consumer benefits.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can you write social media content?</button>
+                        <div class="faq-answer">
+                            <p>Yes. I create short-form captions and content concepts tailored for digital platforms and audience engagement.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Are you available for remote jobs?</button>
+                        <div class="faq-answer">
+                            <p>Yes. I am fully available for remote content writing opportunities and ongoing digital publishing roles.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Are you available for project-based work?</button>
+                        <div class="faq-answer">
+                            <p>Yes. I take on custom writing projects, website content overhauls, article packages, and editorial assignments on a project basis.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How can I contact you?</button>
+                        <div class="faq-answer">
+                            <p>You can reach me directly via phone at +234 906 7090901, via WhatsApp, by email at content.writer@gmail.com, or by using the contact form at the bottom of this page.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (ZERO IMAGES) -->
+        <section id="contact">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Get in Touch</span>
+                    <h2>Let's find the right words.</h2>
+                    <p>Have an article, website, campaign or content idea in mind? Let's discuss the audience, message and direction.</p>
+                    <div class="contact-details-list">
+                        <div class="contact-detail-row">
+                            <span class="label">Phone</span>
+                            <a href="tel:+2349067090901" class="val">+234 906 7090901</a>
+                        </div>
+                        <div class="contact-detail-row">
+                            <span class="label">WhatsApp</span>
+                            <a href="https://wa.me/2349067090901" target="_blank" rel="noopener" class="val">+234 906 7090901</a>
+                        </div>
+                        <div class="contact-detail-row">
+                            <span class="label">Email</span>
+                            <a href="mailto:content.writer@gmail.com" class="val">content.writer@gmail.com</a>
+                        </div>
+                        <div class="contact-detail-row">
+                            <span class="label">Availability</span>
+                            <span class="val" style="font-size: 1.1rem; color: var(--accent);">Available for remote jobs and project-based work</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="tel:+2349067090901" class="btn">Call Now</a>
+                        <a href="https://wa.me/2349067090901" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp</a>
+                        <a href="mailto:content.writer@gmail.com" class="btn btn-outline">Send Email</a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem;">Start a Conversation</h3>
+                    <form id="portfolio-form" novalidate>
+                        <div class="form-group">
+                            <label for="form-name">Your Name *</label>
+                            <input type="text" id="form-name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email Address *</label>
+                            <input type="email5" id="form-email" class="form-control" placeholder="your.email@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-type">Content Type</label>
+                            <select id="form-type" class="form-control">
+                                <option value="Blog Article">Blog Article</option>
+                                <option value="Website Content">Website Content</option>
+                                <option value="SEO Content">SEO Content</option>
+                                <option value="Copywriting">Copywriting</option>
+                                <option value="Landing Page">Landing Page</option>
+                                <option value="Product Description">Product Description</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Editing">Editing</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-topic">Topic / Subject</label>
+                            <input type="text" id="form-topic" class="form-control" placeholder="Brief subject or project title">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message *</label>
+                            <textarea id="form-message" class="form-control" placeholder="Describe your project, goals, or content requirements..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Send Inquiry</button>
+                    </form>
+                    <div class="form-success-message" id="form-success">
+                        <h4>Inquiry Prepared Successfully!</h4>
+                        <p>Since this is a client-side frontend portfolio without a backend server, you can instantly send your message via WhatsApp or Email below:</p>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                            <a href="#" id="whatsapp-send-btn" target="_blank" rel="noopener" class="btn" style="font-size: 0.8rem; padding: 0.5rem 1rem;">Send via WhatsApp</a>
+                            <a href="#" id="email-send-btn" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.5rem 1rem;">Send via Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <h2>Make every word count.</h2>
+                <p>Clear ideas deserve clear words. Let's turn your message into content people can understand, remember and act on.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn">Start a Project</a>
+                    <a href="https://wa.me/2349067090901" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp Me</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">WORDS.STUDIO</h3>
+                    <p>Content writing focused on clarity, storytelling, research, structure and purposeful communication.</p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Available for remote jobs and project-based content writing work.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#specialties">Writing</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#samples">Work</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#tools">Tools & Labs</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+2349067090901">+234 906 7090901</a></li>
+                        <li><a href="mailto:content.writer@gmail.com">content.writer@gmail.com</a></li>
+                        <li><a href="https://wa.me/2349067090901" target="_blank" rel="noopener">WhatsApp Chat</a></li>
+                        <li style="color: var(--accent); margin-top: 0.5rem; font-size: 0.85rem; font-weight: 500;">Remote & Project Work</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; <span id="current-year"></span> Content Writer. All Rights Reserved.</div>
+                <div>Designed with editorial typography and high readability.</div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Vanilla JavaScript Implementation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* Current Year */
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            /* Mobile Navigation Toggle */
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+            
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile-open');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('mobile-open');
+                });
+            });
+
+            /* Reading Progress Bar & Back to Top */
+            const progressBar = document.getElementById('reading-progress');
+            const backToTopBtn = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', () => {
+                const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const progress = (window.scrollY / totalHeight) * 100;
+                progressBar.style.width = progress + '%';
+
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            /* Dark Mode Toggle */
+            const themeToggle = document.getElementById('theme-toggle');
+            const readerDarkModeBtn = document.getElementById('reader-dark-mode');
+
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                if (currentTheme === 'dark') {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            }
+
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+
+            themeToggle.addEventListener('click', toggleTheme);
+            if (readerDarkModeBtn) readerDarkModeBtn.addEventListener('click', toggleTheme);
+
+            /* Interactive Article Reader Controls */
+            const articleBox = document.getElementById('article-box');
+            const fontIncreaseBtn = document.getElementById('font-increase');
+            const fontDecreaseBtn = document.getElementById('font-decrease');
+            const widthBtns = document.querySelectorAll('.width-btn');
+            const articleTextContent = document.getElementById('article-text-content');
+
+            let currentFontSize = 1.15; // rem
+
+            fontIncreaseBtn.addEventListener('click', () => {
+                if (currentFontSize < 1.4) {
+                    currentFontSize += 0.1;
+                    articleTextContent.style.fontSize = currentFontSize + 'rem';
+                }
+            });
+
+            fontDecreaseBtn.addEventListener('click', () => {
+                if (currentFontSize > 0.95) {
+                    currentFontSize -= 0.1;
+                    articleTextContent.style.fontSize = currentFontSize + 'rem';
+                }
+            });
+
+            widthBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    widthBtns.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    const widthType = e.target.getAttribute('data-width');
+                    articleBox.classList.remove('width-narrow', 'width-wide');
+                    if (widthType === 'narrow') articleBox.classList.add('width-narrow');
+                    if (widthType === 'wide') articleBox.classList.add('width-wide');
+                });
+            });
+
+            /* Headline Lab Tool */
+            const headlineInput = document.getElementById('headline-input');
+            const generateHeadlinesBtn = document.getElementById('generate-headlines-btn');
+            const headlineOutput = document.getElementById('headline-output');
+
+            generateHeadlinesBtn.addEventListener('click', () => {
+                const topic = headlineInput.value.trim() || 'Professional Writing';
+                
+                const variations = [
+                    `[Informative] Understanding ${topic}: A Complete Guide for Modern Readers`,
+                    `[Curiosity] What Most People Get Wrong About ${topic}`,
+                    `[Question] Are You Making These Critical Mistakes in ${topic}?`,
+                    `[Benefit] How to Master ${topic} and Improve Your Results Instantly`,
+                    `[How-To] The Step-by-Step Blueprint for Effective ${topic}`,
+                    `[Editorial] Why ${topic} Matters More Than Ever in Today's Digital Landscape`
+                ];
+
+                headlineOutput.innerHTML = `<strong style="display:block; margin-bottom:0.75rem; color:var(--accent);">Conceptual Headline Variations for: "${topic}"</strong><br>` + variations.join('<br><br>');
+            });
+
+            /* Tone Selector Tool */
+            const toneChips = document.querySelectorAll('.tone-chip');
+            const toneOutput = document.getElementById('tone-output');
+
+            const toneSentences = {
+                professional: '"Our comprehensive content solutions are meticulously structured to support your institutional communication goals."',
+                friendly: '"We are always excited to help you craft warm, welcoming stories that your readers will genuinely love!"',
+                persuasive: '"Stop losing potential clients to unclear messaging. Transform your words into your most powerful conversion tool today."',
+                educational: '"To understand effective writing, one must examine the foundational relationship between clear syntax and cognitive load."',
+                editorial: '"In a digital ecosystem saturated with noise, restraint and precision remain the ultimate mark of distinction."',
+                conversational: '"Let’s be honest—writing clear content shouldn’t feel like a chore. Here is how we make it simple and effective."',
+                minimal: '"Clear words. Strong structure. Better results."'
+            };
+
+            toneChips.forEach(chip => {
+                chip.addEventListener('click', (e) => {
+                    toneChips.forEach(c => c.classList.remove('active'));
+                    e.target.classList.add('active');
+                    const tone = e.target.getAttribute('data-tone');
+                    toneOutput.textContent = toneSentences[tone];
+                });
+            });
+
+            /* Article Structure Builder */
+            const builderBtns = document.querySelectorAll('.builder-step-btn');
+            const builderDesc = document.getElementById('builder-desc');
+
+            const builderData = {
+                headline: {
+                    title: "Headline Architecture",
+                    desc: "The headline acts as the primary gatekeeper. It must accurately reflect the article's value proposition while sparking enough curiosity to warrant the reader's time and attention."
+                },
+                intro: {
+                    title: "Introduction & Hook",
+                    desc: "The introduction establishes the context, highlights the core problem or insight, and sets the tone for the entire piece. It answers the reader's unspoken question: 'Why should I read this?'"
+                },
+                p1: {
+                    title: "Main Point 01 — Foundation",
+                    desc: "Establishes the primary premise with supporting evidence, relevant data, or illustrative examples, laying the groundwork for deeper exploration."
+                },
+                p2: {
+                    title: "Main Point 02 — Nuance & Depth",
+                    desc: "Expands on the argument by addressing complexities, offering counter-perspectives, or providing actionable frameworks."
+                },
+                p3: {
+                    title: "Main Point 03 — Synthesis",
+                    desc: "Brings together preceding insights to demonstrate practical application and real-world relevance."
+                },
+                conclusion: {
+                    title: "Conclusion & Summary",
+                    desc: "Summarizes the core thesis without simply repeating previous sentences, leaving the reader with a memorable parting takeaway."
+                },
+                cta: {
+                    title: "Call to Action (CTA)",
+                    desc: "Directs the reader toward the next logical step—whether exploring further content, starting a conversation, or engaging with a service."
+                }
+            };
+
+            builderBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    builderBtns.forEach(b => b.classList.remove('active'));
+                    const targetBtn = e.target.closest('.builder-step-btn');
+                    targetBtn.classList.add('active');
+                    const step = targetBtn.getAttribute('data-step');
+                    const data = builderData[step];
+                    builderDesc.innerHTML = `<h4 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--accent);">${data.title}</h4><p>${data.desc}</p>`;
+                });
+            });
+
+            /* Content Quality Checker Tool */
+            const checkerInput = document.getElementById('checker-input');
+            const statWords = document.getElementById('stat-words');
+            const statChars = document.getElementById('stat-chars');
+            const statSentences = document.getElementById('stat-sentences');
+            const statParagraphs = document.getElementById('stat-paragraphs');
+
+            function analyzeText(text) {
+                const trimmed = text.trim();
+                const words = trimmed === '' ? 0 : trimmed.split(/\s+/).length;
+                const chars = text.length;
+                const sentences = trimmed === '' ? 0 : trimmed.split(/[.!?]+/).filter(Boolean).length;
+                const paragraphs = trimmed === '' ? 0 : trimmed.split(/\n+/).filter(Boolean).length;
+
+                statWords.textContent = words;
+                statChars.textContent = chars;
+                statSentences.textContent = sentences;
+                statParagraphs.textContent = paragraphs;
+            }
+
+            checkerInput.addEventListener('input', (e) => {
+                analyzeText(e.target.value);
+            });
+
+            /* Brand Voice Spectrum Sliders */
+            const sliderFormal = document.getElementById('slider-formal');
+            const sliderPersuasive = document.getElementById('slider-persuasive');
+            const sliderSimple = document.getElementById('slider-simple');
+            const voiceSliderOutput = document.getElementById('voice-slider-output');
+
+            function updateVoiceOutput() {
+                const formalVal = parseInt(sliderFormal.value);
+                const persuasiveVal = parseInt(sliderPersuasive.value);
+                const simpleVal = parseInt(sliderSimple.value);
+
+                let text = '"';
+                if (formalVal < 35) {
+                    text += 'Hey there! We make awesome content writing services super easy and accessible for your brand.';
+                } else if (formalVal > 65) {
+                    text += 'We provide professional content writing services designed to communicate your institutional brand message with precision.';
+                } else {
+                    text += 'We provide professional content writing services designed to communicate your brand message with clarity.';
+                }
+
+                if (persuasiveVal > 70) {
+                    text += ' Elevate your communication and drive conversions today.';
+                }
+
+                text += '"';
+                voiceSliderOutput.textContent = text;
+            }
+
+            if (sliderFormal && sliderPersuasive && sliderSimple) {
+                sliderFormal.addEventListener('input', updateVoiceOutput);
+                sliderPersuasive.addEventListener('input', updateVoiceOutput);
+                sliderSimple.addEventListener('input', updateVoiceOutput);
+            }
+
+            /* FAQ Accordion */
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const questionBtn = item.querySelector('.faq-question');
+                questionBtn.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('active');
+                    faqItems.forEach(i => i.classList.remove('active'));
+                    if (!isOpen) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            /* Contact Form Validation & WhatsApp/Email Generator */
+            const contactForm = document.getElementById('portfolio-form');
+            const formSuccess = document.getElementById('form-success');
+            const whatsappSendBtn = document.getElementById('whatsapp-send-btn');
+            const emailSendBtn = document.getElementById('email-send-btn');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('form-name').value.trim();
+                const email = document.getElementById('form-email').value.trim();
+                const type = document.getElementById('form-type').value;
+                const topic = document.getElementById('form-topic').value.trim();
+                const message = document.getElementById('form-message').value.trim();
+
+                if (!name || !email || !message) {
+                    alert('Please fill in all required fields (Name, Email, Message).');
+                    return;
+                }
+
+                // Construct WhatsApp Message
+                const waText = `Hello, my name is ${name} (${email}). I am interested in ${type} regarding "${topic || 'General Inquiry'}". Message: ${message}`;
+                const encodedWaText = encodeURIComponent(waText);
+                whatsappSendBtn.setAttribute('href', `https://wa.me/2349067090901?text=${encodedWaText}`);
+
+                // Construct Email
+                const emailSubject = encodeURIComponent(`Portfolio Inquiry: ${type} - ${name}`);
+                const emailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nContent Type: ${type}\nTopic: ${topic}\n\nMessage:\n${message}`);
+                emailSendBtn.setAttribute('href', `mailto:content.writer@gmail.com?subject=${emailSubject}&body=${emailBody}`);
+
+                contactForm.style.display = 'none';
+                formSuccess.style.display = 'block';
+            });
+
+        });
+    </script>
+</body>
+</html>
